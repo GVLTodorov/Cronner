@@ -11,5 +11,4 @@ mkdir -p /etc/periodic/monthly
 echo "End..."
 
 echo "Starting ..."
-crontab -l
-cron -f -l 8 -L
+cron -f -l 8
