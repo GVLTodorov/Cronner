@@ -1,7 +1,6 @@
 # do daily/weekly/monthly maintenance
 # min    hour     day      month    weekday    command
 * * *  * * echo "working..." > /proc/1/fd/1 2>/proc/1/fd/2
-* * *  * * mkdir /etc/periodic/1min/ && run-parts /etc/periodic/1min/ > /proc/1/fd/1 2>/proc/1/fd/2
 */15 * * * * run-parts /etc/periodic/15min/ > /proc/1/fd/1 2>/proc/1/fd/2
 */30 * * * * run-parts /etc/periodic/30min/ > /proc/1/fd/1 2>/proc/1/fd/2
 0  * * * * run-parts /etc/periodic/hourly/ > /proc/1/fd/1 2>/proc/1/fd/2
