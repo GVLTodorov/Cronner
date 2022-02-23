@@ -17,4 +17,5 @@ RUN echo "Create Directories..." \
 
 COPY crontab /etc/cron.d/
 RUN chmod +x /etc/cron.d/crontab
-CMD ["cron", "-f", "-l", "2"]
+RUN crontab /etc/cron.d/crontab
+CMD ["cron", "-f"]
