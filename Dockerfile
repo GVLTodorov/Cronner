@@ -8,6 +8,9 @@ VOLUME /etc/periodic
 
 COPY crontab /etc/cron.d/
 RUN chmod +x /etc/cron.d/crontab
+RUN crontab /etc/cron.d/crontab
+
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x entrypoint.sh
+
 ENTRYPOINT ["./entrypoint.sh"]
