@@ -19,5 +19,6 @@ RUN echo "Create Directories..." \
 
 COPY crontab /etc/cron.d/
 RUN chmod +x /etc/cron.d/crontab
-RUN crontab /etc/cron.d/crontab
+COPY entrypoint.sh /entrypoint.sh
+ENTRYPOINT ["./entrypoint.sh"]
 CMD ["cron", "-f"]
