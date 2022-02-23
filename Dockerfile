@@ -1,4 +1,5 @@
 FROM ubuntu:latest
+MAINTAINER georgi.vladimirov.todorov@gmail.com
 
 RUN apt-get update -y && apt-get upgrade -y
 RUN apt-get install -y --no-install-recommends curl jq cron
@@ -15,5 +16,6 @@ RUN echo "Create Directories..." \
     && mkdir /etc/periodic/monthly
 
 COPY crontab /etc/cron.d/
+RUN chmod +x /etc/cron.d/crontab
 RUN crontab /etc/cron.d/crontab
 CMD ["cron", "-f"]
