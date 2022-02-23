@@ -1,11 +1,11 @@
 #!/bin/sh
 echo "Create Directories..."
-mkdir /etc/periodic
-mkdir /etc/periodic/1min
-mkdir /etc/periodic/15min
-mkdir /etc/periodic/30min
-mkdir /etc/periodic/hourly
-mkdir /etc/periodic/12hour
-mkdir /etc/periodic/daily
-mkdir /etc/periodic/weekly
-mkdir /etc/periodic/monthly
+mkdir -p /etc/periodic/1min
+mkdir -p /etc/periodic/15min
+mkdir -p /etc/periodic/30min
+mkdir -p /etc/periodic/hourly
+mkdir -p /etc/periodic/12hour
+mkdir -p /etc/periodic/daily
+mkdir -p /etc/periodic/weekly
+mkdir -p /etc/periodic/monthly
+echo "End..."
