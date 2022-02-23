@@ -5,14 +5,14 @@ RUN apt-get install -y --no-install-recommends curl jq cron
 
 RUN echo "Create Directories..." \
     && mkdir /etc/periodic \
-    && mkdir /etc/periodic/1min \
-    && mkdir /etc/periodic/15min \
-    && mkdir /etc/periodic/30min \
-    && mkdir /etc/periodic/hourly \
-    && mkdir /etc/periodic/12hour \
-    && mkdir /etc/periodic/daily \
-    && mkdir /etc/periodic/weekly \
-    && mkdir /etc/periodic/monthly
+    && mkdir /etc/cron.1min \
+    && mkdir /etc/cron.15min \
+    && mkdir /etc/cron.30min \
+    && mkdir /etc/cron.hourly \
+    && mkdir /etc/cron.12hour \
+    && mkdir /etc/cron.daily \
+    && mkdir /etc/cron.weekly \
+    && mkdir /etc/cron.monthly
 
 COPY crontab /etc/cron.d/
 RUN crontab /etc/cron.d/crontab
