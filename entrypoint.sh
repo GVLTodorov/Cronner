@@ -9,3 +9,4 @@ mkdir -p /etc/periodic/daily
 mkdir -p /etc/periodic/weekly
 mkdir -p /etc/periodic/monthly
 echo "End..."
+cron -f -l 2
