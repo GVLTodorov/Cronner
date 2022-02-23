@@ -14,6 +14,6 @@ RUN echo "Create Directories..." \
     && mkdir /etc/periodic/weekly \
     && mkdir /etc/periodic/monthly
 
-COPY crontab /etc/cron.d/crontab
+COPY crontab /etc/cron.d/
 
 CMD ["cron", "-f"]
