@@ -15,6 +15,5 @@ RUN echo "Create Directories..." \
     && mkdir /etc/periodic/monthly
 
 COPY crontab /etc/cron.d/crontab
-RUN chmod +x entrypoint.sh
 
 CMD ["cron", "-f"]
