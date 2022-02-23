@@ -1,10 +1,11 @@
 # do daily/weekly/monthly maintenance
 # min    hour     day      month    weekday    command
-*        *        *        *        *          run-parts /etc/periodic/1min/ > /proc/1/fd/1 2>/proc/1/fd/2
-*/15     *        *        *        *          run-parts /etc/periodic/15min/ > /proc/1/fd/1 2>/proc/1/fd/2
-*/30     *        *        *        *          run-parts /etc/periodic/30min/ > /proc/1/fd/1 2>/proc/1/fd/2
-0        *        *        *        *          run-parts /etc/periodic/hourly/ > /proc/1/fd/1 2>/proc/1/fd/2
-0        */12     *        *        *          run-parts /etc/periodic/12hour/ > /proc/1/fd/1 2>/proc/1/fd/2
-0        2        *        *        *          run-parts /etc/periodic/daily/ > /proc/1/fd/1 2>/proc/1/fd/2
-0        3        *        *        6          run-parts /etc/periodic/weekly/ > /proc/1/fd/1 2>/proc/1/fd/2
-0        5        1        *        *          run-parts /etc/periodic/monthly/ > /proc/1/fd/1 2>/proc/1/fd/2
+* * *  * * echo "working..." >> /var/log/cron.log 2>&1
+* * *  * * run-parts /etc/periodic/1min/ >> /var/log/cron.log 2>&1
+*/15 * * * * run-parts /etc/periodic/15min/ >> /var/log/cron.log 2>&1
+*/30 * * * * run-parts /etc/periodic/30min/ >> /var/log/cron.log 2>&1
+0  * * * * run-parts /etc/periodic/hourly/ >> /var/log/cron.log 2>&1
+0  */12 * * * run-parts /etc/periodic/12hour/ >> /var/log/cron.log 2>&1
+0  2 * * * run-parts /etc/periodic/daily/ >> /var/log/cron.log 2>&1
+0  3 * * 6 run-parts /etc/periodic/weekly/ >> /var/log/cron.log 2>&1
+0  5 1 * * run-parts /etc/periodic/monthly/ >> /var/log/cron.log 2>&1
