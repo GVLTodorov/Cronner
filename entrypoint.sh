@@ -10,4 +10,4 @@ mkdir -p /etc/periodic/weekly
 mkdir -p /etc/periodic/monthly
 echo "End..."
 echo "Starting ..."
-service cron start &
+cron && tail -f /var/log/cron.log
