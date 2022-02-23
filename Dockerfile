@@ -14,8 +14,8 @@ RUN echo "Create Directories..." \
     && mkdir /etc/periodic/weekly \
     && mkdir /etc/periodic/monthly
 
-COPY crontab /etc/crontabs/root
-COPY entrypoint.sh entrypoint.sh
-
+COPY crontab /etc/cron.d/crontab
+RUN touch /var/log/cron.log
 RUN chmod +x entrypoint.sh
-ENTRYPOINT ["./entrypoint.sh"]
+
+CMD ["bash","entrypoint.sh"]
