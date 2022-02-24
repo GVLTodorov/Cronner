@@ -9,5 +9,3 @@ mkdir -p /etc/periodic/daily
 mkdir -p /etc/periodic/weekly
 mkdir -p /etc/periodic/monthly
 echo "End..."
-echo "Starting ..."
-cron && tail -f /var/log/cron.log
