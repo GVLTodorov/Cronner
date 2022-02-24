@@ -16,3 +16,4 @@ COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x entrypoint.sh
 
 ENTRYPOINT ["./entrypoint.sh"]
+CMD ["sh","-c","cron && tail -f /var/log/cron.log"]
