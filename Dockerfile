@@ -15,4 +15,4 @@ RUN touch /var/log/cron.log
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x entrypoint.sh
 RUN "./entrypoint.sh"
-CMD ["cron","-f", "-l", "2"]
+CMD ["cron -f -l 2 && tail -f /var/log/cron.log"]
