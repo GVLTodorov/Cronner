@@ -2,7 +2,7 @@ FROM ubuntu:latest
 MAINTAINER georgi.vladimirov.todorov@gmail.com
 
 RUN apt-get update -y && apt-get upgrade -y
-RUN apt-get install -y --no-install-recommends curl jq cron
+RUN apt-get install -y --no-install-recommends curl jq cron ca-certificates
 
 VOLUME /etc/periodic
 
