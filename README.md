@@ -7,6 +7,8 @@
 ## Docker Compose
 
 ```
+version: '3.8'
+services:  
   cronner:
     image: ghcr.io/gvltodorov/cronner:latest
     container_name: cronner
@@ -18,4 +20,4 @@
 Docker Image will populate folders mention in **Prefined Folders**
 1. Go to your mapped folder (from example **/srv/cronner**) and choose folder 1min, 15min, 30min ... etc.
 2. Create your bash script.
-3. Execute **sudo chmod+x script.sh** in that way **script.sh** will be executable.
+3. Execute **sudo chmod+x script.sh** so file can be executable.
