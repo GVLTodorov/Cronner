@@ -1,6 +1,6 @@
 # Cronner Docker Image with CRON functionality
 
-## Prefined Folders
+## Predefined Folders
 
 ```1min, 15min, 30min, hourly, 12hour, daily, weekly, monthly```
 
