@@ -17,7 +17,7 @@ services:
        - /srv/cronner:/etc/cronner
 ```
 
-Docker Image will populate folders mention in **Prefined Folders**
+Docker Image will populate folders mention in **Predefined Folders**
 1. Go to your mapped folder (from example **/srv/cronner**) and choose folder 1min, 15min, 30min ... etc.
 2. Create your bash script without extension like **script**.
 3. Execute **sudo chmod+x script** so file can be executable.
