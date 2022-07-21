@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM alpine:latest
 MAINTAINER georgi.vladimirov.todorov@gmail.com
 
 RUN apt-get update -y && apt-get upgrade -y
