@@ -1,8 +1,8 @@
 FROM alpine:latest
 MAINTAINER georgi.vladimirov.todorov@gmail.com
 
-RUN apt-get update -y && apt-get upgrade -y
-RUN apt-get install -y --no-install-recommends curl jq cron ca-certificates
+RUN apk update -y && apk upgrade -y
+RUN apk install -y curl jq cron ca-certificates
 
 VOLUME /etc/periodic
 
