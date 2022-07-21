@@ -1,8 +1,7 @@
 FROM alpine:latest
 MAINTAINER georgi.vladimirov.todorov@gmail.com
 
-RUN apk update 
-RUN apk add curl jq cron ca-certificates
+RUN apk update && apk add curl jq ca-certificates
 
 VOLUME /etc/periodic
 
