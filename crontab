@@ -5,6 +5,6 @@
 */30 * * * * run-parts /etc/cronner/30min/ >> /var/log/cron.log 2>&1
 0 * * * * run-parts /etc/cronner/hourly/ >> /var/log/cron.log 2>&1
 0 */12 * * * run-parts /etc/cronner/12hour/ >> /var/log/cron.log 2>&1
-0 2 * * * run-parts /etc/cronner/daily/ >> /var/log/cron.log 2>&1
+0 5 * * * run-parts /etc/cronner/daily/ >> /var/log/cron.log 2>&1
 0 3 * * 6 run-parts /etc/cronner/weekly/ >> /var/log/cron.log 2>&1
 0 5 1 * * run-parts /etc/cronner/monthly/ >> /var/log/cron.log 2>&1
