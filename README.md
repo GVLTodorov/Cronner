@@ -1,4 +1,4 @@
-# Cronner Docker Image with CRON functionality
+# Docker Image with CRON functionality
 
 ## Predefined Folders
 
