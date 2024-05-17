@@ -1,8 +1,12 @@
 FROM debian:stable-slim
 MAINTAINER georgi.vladimirov.todorov@gmail.com
 
+ENV TZ=UTC
+
 RUN apt-get update -y && apt-get upgrade -y
 RUN apt-get install -y --no-install-recommends curl jq cron ca-certificates
+
+RUN ln -fs /usr/share/zoneinfo/$TZ /etc/localtime && dpkg-reconfigure -f noninteractive tzdata
 
 VOLUME /etc/cronner
 
