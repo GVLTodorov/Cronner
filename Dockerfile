@@ -4,7 +4,7 @@ MAINTAINER georgi.vladimirov.todorov@gmail.com
 ENV TZ=UTC
 
 RUN apt-get update -y && apt-get upgrade -y
-RUN apt-get install -y --no-install-recommends curl jq cron ca-certificates zip unzip
+RUN apt-get install -y --no-install-recommends curl jq cron ca-certificates bc zip unzip
 
 RUN ln -fs /usr/share/zoneinfo/$TZ /etc/localtime && dpkg-reconfigure -f noninteractive tzdata
 
