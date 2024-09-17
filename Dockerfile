@@ -18,8 +18,6 @@ RUN crontab /etc/cron.d/crontab
 
 RUN touch /var/log/cron.log
 
-VOLUME /etc/cronner
-
 COPY start.sh /
 RUN chmod +x /start.sh
 CMD ["/start.sh"]
