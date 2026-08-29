@@ -1,3 +1,5 @@
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+
 # do daily/weekly/monthly maintenance
 # min    hour     day      month    weekday    command
 * * * * * run-parts /srv/cronner/1min/ >> /var/log/cron.log 2>&1
